@@ -4,11 +4,11 @@ using System.Text;
 
 namespace yash.Data.Entities
 {
-    public class Product
+    public class ProductType
     {
         public int Id { get; set; }
 
-        public string ProductType { get; set; }//ring, chain
+        public string Name { get; set; }//ring, chain
 
         public List<Item> Items { get; set; }
     }
