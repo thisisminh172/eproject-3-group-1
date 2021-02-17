@@ -34,12 +34,13 @@ namespace yash.Data.Entities
 
         public int Size { get; set; }
 
-        public virtual Gold Gold { get; set; }
-        public virtual Certification Certification { get; set; }
-        public virtual Product Product { get; set; }
-        public virtual Brand Brand { get; set; }
-        public virtual Category Category { get; set; }
+        public Gold Gold { get; set; }
+        public Certification Certification { get; set; }
+        public ProductType Product { get; set; }
+        public Brand Brand { get; set; }
+        public Category Category { get; set; }
 
-        public virtual ICollection<ItemImage> ItemImages { get; set; }
+        public List<ItemImage> ItemImages { get; set; }
+        public List<Cart> Carts { get; set; }
     }
 }

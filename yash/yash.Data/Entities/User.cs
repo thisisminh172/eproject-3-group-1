@@ -27,5 +27,8 @@ namespace yash.Data.Entities
         public DateTime CurrentDate { get; set; }
 
         public string Password { get; set; }
+
+        public List<Cart> Carts { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }
