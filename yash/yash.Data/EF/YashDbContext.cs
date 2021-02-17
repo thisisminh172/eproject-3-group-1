@@ -2,7 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using YashSolution.Data.Entities;
+using yash.Data.Configurations;
+using yash.Data.Entities;
 
 namespace yash.Data.EF
 {
@@ -14,7 +15,9 @@ namespace yash.Data.EF
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new CartConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            //base.OnModelCreating(modelBuilder);
         }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<User> Users { get; set; }
@@ -24,6 +27,10 @@ namespace yash.Data.EF
         public DbSet<Diamond> Diamonds { get; set; }
         public DbSet<Gold> Golds { get; set; }
         public DbSet<Item> Items { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+
     }
 }
